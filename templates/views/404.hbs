@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>404</title>
+    <!-- 
+        set up link to attribute 
+        rel: short for relationship
+        href: path to the file we're trying to load
+            absolute path: the root is the web server root (public dir)
+    -->
+    <link rel="stylesheet" href="/css/styles.css" />
+    <!-- js -->
+    <script src="/js/app.js"></script>
+  </head>
+
+  <body>
+    <div class="main-content">
+      {{>header}}
+      <p> {{msg}} </p>
+    </div>
+    {{>footer}}
+  </body>
+</html>
