@@ -92,6 +92,8 @@ app.get("/weather", (req, res) => {
       if (data) {
         return res.send({
           forecast: data.weather_descriptions,
+          temperature: data.temperature,
+          feelslike: data.feelslike,
           location,
           address: req.query.address,
         });
