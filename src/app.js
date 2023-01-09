@@ -19,6 +19,7 @@ and we call this function to create a new Express application: express()
 const express = require("express");
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 /*
 Serve up the directory
@@ -130,6 +131,6 @@ app.get("*", (req, res) => {
 });
 
 // To start the server up (single time)
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("Server is up on port 3000.");
 });

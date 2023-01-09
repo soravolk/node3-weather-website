@@ -1,5 +1,3 @@
-console.log("Client side javascript file is loaded!");
-
 /* 
 Fetch is not part of JavaScript. It's a browser based API which means it's sth we can use in all modern browsers but it's not accessible in nodejs
 
@@ -37,8 +35,8 @@ weatherForm.addEventListener("submit", (e) => {
   msgOne.textContent = "Loading ...";
   msgTwo.textContent = "";
 
-  // console.log(location);
-  fetch(`http://localhost:3000/weather?address=${location}`).then((res) => {
+  // leave just /weather?... : to make sure to use local host if we're running on local host or to use the Heroku app url if we're running on Heroku
+  fetch(`/weather?address=${location}`).then((res) => {
     res.json().then((data) => {
       if (data.error) {
         msgOne.textContent = data.error;
